@@ -1,0 +1,30 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Graphics/Dice/02.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Graphics/Dice/01.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Graphics/Dice/06.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Graphics/Dice/03.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Graphics/Dice/04.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Graphics/Dice/05.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "dice",
+"speed": 4.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 21.9281, 21.7423 )
+
+[node name="Dice" type="KinematicBody2D"]
+position = Vector2( 66.8073, 42.1941 )
+
+[node name="Dado" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "dice"
+speed_scale = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
