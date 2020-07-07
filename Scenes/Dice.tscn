@@ -12,7 +12,7 @@ animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "dice",
-"speed": 4.0
+"speed": 20.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
